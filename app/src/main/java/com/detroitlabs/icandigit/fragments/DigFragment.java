@@ -75,7 +75,17 @@ public class DigFragment extends Fragment implements LocationListener{
 
                 listOfHoleMarkers.add(googleMap.addMarker
                         (new MarkerOptions()
-                                .position(new LatLng(locationManager.getLastKnownLocation(locationProvider).getLatitude(),locationManager.getLastKnownLocation(locationProvider).getLongitude()))));
+                                .position(new LatLng(
+                                        locationManager
+                                        .getLastKnownLocation(locationProvider)
+                                        .getLatitude(),
+                                        locationManager
+                                        .getLastKnownLocation(locationProvider)
+                                        .getLongitude()
+                                        )
+                                )
+                        )
+                );
 
                 // Create a new Dialog
                 Dialog dialog = new Dialog(getActivity());
