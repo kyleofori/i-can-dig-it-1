@@ -77,21 +77,7 @@ public class DigFragment extends Fragment implements LocationListener{
                         (new MarkerOptions()
                                 .position(new LatLng(locationManager.getLastKnownLocation(locationProvider).getLatitude(),locationManager.getLastKnownLocation(locationProvider).getLongitude()))));
 
-        //This came from Android Developer Docs, but didn't work too well for me.
-//
-//                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-//
-//
-//                // Create new fragments and transaction
-//                DugDialogFragment dugDialogFragment = new DugDialogFragment();
-//
-//                // Commit the transaction
-//                fragmentTransaction.add(R.id.fragment_container, dugDialogFragment);
-//                dugDialogFragment.show(fragmentTransaction, "not sure what this should be");
-////                fragmentTransaction.commit();
-
-
-                // Created a new Dialog
+                // Create a new Dialog
                 Dialog dialog = new Dialog(getActivity());
 
 // Set the title
